@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ComplexCalculatorWPF"
         mc:Ignorable="d"
         Title="InputBoxDialog" Height="160" Width="360" WindowStartupLocation="CenterScreen">
-    <Grid Margin="15">
+    <Grid Margin="15,15,23.918,15">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />

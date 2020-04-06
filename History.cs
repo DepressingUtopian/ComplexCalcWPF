@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace STP2
+namespace ComplexCalculatorWPF
 {
     class History
     {
@@ -23,6 +23,10 @@ namespace STP2
         public void AddRecord(string expression, string resultExpression)
         {
             this.ListRecords.Add(new Record(expression, resultExpression));
+        }
+        public void AddRecord(string expression,string operation, string resultExpression)
+        {
+            this.ListRecords.Add(new Record(expression, operation, resultExpression));
         }
         public void Clear() { this.ListRecords.Clear(); }
         public int Count() { return this.ListRecords.Count; }

@@ -151,6 +151,32 @@ namespace ComplexCalculatorWPF
         {
             this.Output_TextBox.Text = controlFacade.DoCommand((sender as Button).Tag.ToString());
         }
+        private void MenuItem_ExitClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void MenuItem_ViewHistoryClick(object sender, RoutedEventArgs e)
+        {
+            HistoryForm historyForm = new HistoryForm();
+            historyForm.Show();
+            if (controlFacade.History.Count() == 0)
+            {
+                historyForm.listview_HistoryLog.Items.Add("История пуста");
+            }
+            else
+            {
+                foreach (var elem in controlFacade.History.GetHistoryLog())
+                {
+                    historyForm.listview_HistoryLog.Items.Add(elem);
+                }
+
+            }
+        }
+        private void MenuItem_ViewAboutClick(object sender, RoutedEventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.Show();
+        }
 
     }
     

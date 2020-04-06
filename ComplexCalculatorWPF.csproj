@@ -71,11 +71,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AboutBox.xaml.cs">
+      <DependentUpon>AboutBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ControlFacade.cs" />
+    <Compile Include="HistoryForm.xaml.cs">
+      <DependentUpon>HistoryForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InputBoxDialog.xaml.cs">
       <DependentUpon>InputBoxDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Record.cs" />
+    <Page Include="AboutBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HistoryForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="InputBoxDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ComplexCalculatorWPF
 {
     /// <summary>
-    /// Логика взаимодействия для HistoryForm.xaml
+    /// Логика взаимодействия для AboutBox.xaml
     /// </summary>
-    public partial class HistoryForm : Window
+    public partial class AboutBox : Window
     {
-        public HistoryForm()
+        public AboutBox()
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;

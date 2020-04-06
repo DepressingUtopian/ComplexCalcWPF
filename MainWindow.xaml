@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComplexCalculatorWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="460" Width="500" BorderBrush="#FFABADB3" KeyUp="Window_KeyUp"  WindowStartupLocation="CenterScreen">
+        Title="Калькулятор" Height="480" Width="500" BorderBrush="#FFABADB3" KeyUp="Window_KeyUp"  WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.OpacityMask>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -19,14 +19,14 @@
                    " Stroke="Black" VerticalAlignment="Top" Width="493" Margin="0,0,0,-1"/>
         <Border BorderBrush="#2c2f38" BorderThickness="1" CornerRadius="8" Margin="0,170,0,0">
             <Border BorderThickness="1" Grid.Row="0" Grid.ColumnSpan="2"
-        CornerRadius="10,10,10,10" BorderBrush="Black" Background="#2c2f38" Margin="9,-1,9,9"/>
+        CornerRadius="10,10,10,10" BorderBrush="Black" Background="#2c2f38" Margin="9,20,9,-1"/>
 
         </Border>
-        <TextBox x:Name="Input_TextBox" HorizontalAlignment="Left" Padding="0,0,5,0" Height="42" Margin="10,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="388" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="30" Background="#eaeaea" BorderThickness="1" BorderBrush="Black" IsUndoEnabled="False"/>
-        <Grid Margin="40,180,40,24">
+        <TextBox x:Name="Input_TextBox" HorizontalAlignment="Left" Padding="0,0,5,0" Height="42" Margin="10,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="388" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="30" Background="#eaeaea" BorderThickness="1" BorderBrush="Black" IsUndoEnabled="False"/>
+        <Grid Margin="40,200,40,24">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="166*"/>
-                <ColumnDefinition Width="210*"/>
+                <ColumnDefinition Width="176*"/>
+                <ColumnDefinition Width="205*"/>
                 <ColumnDefinition Width="31*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="Button_1" Content="1" Tag="1" HorizontalAlignment="Left" Margin="3,6,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="30" Foreground="White" Background="#FF33363F" Click="Button_Click">
@@ -160,14 +160,18 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <TextBox x:Name="Output_TextBox" HorizontalAlignment="Left" Padding="0,0,5,0" Height="42" Margin="10,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="388" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Background="#eaeaea" BorderThickness="1" BorderBrush="Black" FontSize="30"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,16.007,0,0" TextWrapping="Wrap" Text="Поле ввода" VerticalAlignment="Top" Width="340" FontSize="16" Foreground="#d8d8da"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,87.231,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Width="340" FontSize="16" Foreground="#d8d8da"/>
-        <ComboBox HorizontalAlignment="Left" Margin="403,114,0,0" VerticalAlignment="Top" Width="80" SelectedIndex="0">
+        <TextBox x:Name="Output_TextBox" HorizontalAlignment="Left" Padding="0,0,5,0" Height="42" Margin="10,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="388" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Background="#eaeaea" BorderThickness="1" BorderBrush="Black" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="Поле ввода" VerticalAlignment="Top" Width="340" FontSize="16" Foreground="#d8d8da"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,113,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Width="340" FontSize="16" Foreground="#d8d8da"/>
+        <ComboBox HorizontalAlignment="Left" Margin="403,140,0,0" VerticalAlignment="Top" Width="80" SelectedIndex="0">
             <Button Content="DEFAULT" Tag="DEFAULT" Click="SelectViewModForOutputTextBox"/>
             <Button Content="IMAG" Tag="IMAG" Click="SelectViewModForOutputTextBox"/>
             <Button Content="REAL" Tag="REAL" Click="SelectViewModForOutputTextBox"/>
         </ComboBox>
-
+        <Menu Height="30" Margin="0,-4,-1,0" VerticalAlignment="Top">
+            <MenuItem Header="Выход" Height="30" Click="MenuItem_ExitClick"></MenuItem>
+            <MenuItem Header="История" Height="30" Click="MenuItem_ViewHistoryClick"></MenuItem>
+            <MenuItem Header="Справка" Click="MenuItem_ViewAboutClick" Height="30" ></MenuItem>
+        </Menu>
     </Grid>
 </Window>
